@@ -10,3 +10,9 @@ r1([
     var greetingNode = dom.byId('greeting');
     domConstruct.place('<em> Dojo!</em>', greetingNode);
 });
+r1([
+    "dojo/dom-construct",
+    "dojo/_base/window"
+], function(domConstruct, win){
+    var n = domConstruct.create("div", { innerHTML: "<p>hi</p>" }, win.body());
+});
